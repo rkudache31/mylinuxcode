@@ -1,0 +1,64 @@
+    6  cat ftpopt|grep test1 |awk 'print $9'
+    7  cat ftpopt|grep test1 |awk '{print $9}'
+   64  ls -lrt|grep vip|awk '{print $9}'
+   65  ls -lrt|grep vip|awk '{print $9}'|sed 's/[:alpha:]//'
+   66  ls -lrt|grep vip|awk '{print $9}'|sed 's/[: alpha :]//'
+   67  ls -lrt|grep vip|awk '{print $9}'|sed 's/[: digit :]//'
+   68  ls -lrt|grep vip|awk '{print $9}'|sed 's/[:digit:]//'
+   69  ls -lrt|grep vip|awk '{print $9}'|sed 's/[[:digit:]]//'
+   70  ls -lrt|grep vip|awk '{print $9}'|sed 's/[a-z]//'
+   71  ls -lrt|grep vip|awk '{print $9}'|sed 's/[a-z]*//'
+   72  ls -lrt|grep vip|awk '{print $9}'|sed 's/[0-9]*//'
+   73  ls -lrt|grep vip|awk '{print $9}'|sed 's/[0-9]*//g'
+  131  awk '{print "Welcome to awk programing"}'
+  134  ls -lrt|awk '{print $5}'
+  135  ls -lrt|awk '{print $6}'
+  136  ls -lrt|awk '{print $7}'
+  137  ls -lrt|awk '{print $1"-"$2"}'
+  138  ls -lrt|awk '{print $1"-"$2 }'
+  139  ls -lrt|awk '{print $7"-"$9 }'
+  141  cat /etc/passwd|awk -F: '{print $1 $7}
+  142  cat /etc/passwd|awk -F: '{print $1' ' $7}
+  143  cat /etc/passwd|awk -F: '{print $1" " $7}
+  144  man awk
+  145  cat /etc/passwd|awk -f pass-short -F: '{print $1" " $7}
+  146  cat /etc/passwd|awk -f passshort -F: '{print $1" " $7}'
+  148  cat /etc/passwd|awk -f passshort -F: '{print $1" " $7}'
+  150  awk -f passshort -F: '{print $1" " $7}' /etc/passwd
+  153  awk  passshort -F: -f testpass '{print $1" " $7}' /etc/passwd
+  154  awk  passshort -F: -f /etc/passwd '{print $1" " $7}' 
+  155  awk  passshort -F: -f test123 /etc/passwd 
+  156  awk   -F: -f passshort /etc/passwd 
+  159  vi awkfile
+  160  awk   -F: -f awkfile /etc/passwd 
+  161  vi awkfile
+  162  awk   -F: -f awkfile /etc/passwd 
+  163  cat awkfile 
+  164  awk 'BEGIN { print "This is my First line "} {print $0}' data
+  165  awk 'BEGIN { print "This is my First line "} {print $1}' data
+  166  awk 'BEGIN { print "This is my First line "} {print $0}' data
+  170  awk 'BEGIN { print "Name mark "} {print $0}' markssheet.txt 
+  171  awk 'BEGIN { print "Name mark "} {print $0} END{print "This is end"}' markssheet.txt 
+  173  sed '/^$/d' markssheet.txt|awk 'BEGIN { print "Name mark "} {print $0} END{print "This is end"}' markssheet.txt 
+  174  sed '/^$/d' markssheet.txt|awk 'BEGIN { print "Name mark "} {print $0} END{print "This is end"}' 
+  178  awk 'BEGIN { print "Name mark "} {print $0} END{print "This is end"}' markssheet.txt 
+  179  sed '/^$/d' markssheet.txt|awk 'BEGIN { print "Name mark "} {print $0} END{print "This is end"}' 
+  180  vi awk2.txt
+  181  awk   awk2.txt /etc/passwd 
+  182  awk   -f awk2.txt /etc/passwd 
+  183  vi awk2.txt
+  184  cat awk2.txt 
+  185  awk 'BEGIN{FS=":"; OFS="-"} {print $1,$6,$7}' /etc/passwd
+  187  awk 'BEGIN{FS="\n"; RS=" "} {print $1,$2,$3' serverdetails
+  188  awk 'BEGIN{FS="\n"; RS=" "} {print $1,$2,$3}' serverdetails
+  190  awk 'BEGIN{FS="\n"; RS=""} {print $1,$2,$3}' serverdetails
+  192  ls -lrt |awk '{if ($5 > 400) print $5-$9}
+  193  ls -lrt |awk '{if ($5 > 400) print $5-$9}'
+  194  ls -lrt |awk '{if ($5 > 400) print $9}'
+  195  ls -lrt |awk '{if ($5 > 400) print $5 " " $9}'
+  196  ls -lrt |awk '{if ($5 > 400) { x = $5 + 100  print x}'
+  197  ls -lrt |awk '{if ($5 > 400){ x = $5 + 100  print x}}'
+  198  ls -lrt |awk '{if ($5 > 400){ x = $5 + 100 ; print x}}'
+  199  cat awk2.txt 
+  205  history |grep awk
+  206  history |grep awk>awk_command

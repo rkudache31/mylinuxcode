@@ -1,0 +1,88 @@
+    4  echo "Hello Ravi"|sed 's/Ravi/Desmond'
+    5  echo "Hello Ravi"|sed 's/Ravi/Desmond/'
+    8  cat ftpopt|sed 's/test1/client_file'
+    9  cat ftpopt|sed 's/test1/client_file/'
+   12  sed 's/linux/python/g' data
+   14  sed 's/linux/python/' data
+   16  sed 's/linux/python/' data
+   17  sed 's/linux/python/g' data
+   19  sed '2 s/linux/python/g' data
+   20  sed '2-3 s/linux/python/g' data
+   21  sed '2,3 s/linux/python/g' data
+   23  sed '2,3 s/linux/python/g' data
+   24  sed '2, s/linux/python/g' data
+   25  sed '2,$ s/linux/python/g' data
+   26  sed 's/linux/\1python/g' data
+   27  sed 's/(*)linux/\1python/g' data
+   28  sed 's/(*)linux/\1python/' data
+   29  sed 's/\(.*\)linux/\1python/' data
+   32  sed 's/\(.*\)linux/\1python/' data
+   33  sed '1 s/linux/\python/' data
+   34  sed '$s/linux/\python/' data
+   35  sed '$s/linux/python/' data
+   36  sed -e '$s/linux/python/' data
+   37  sed -e 's/linux/python/' data
+   38  sed -e '$s/linux/python/' data
+   39  sed -e '$S/linux/python/' data
+   40  sed -e '$s/linux/python/' data
+   42  sed -e '$s/linux/python/' data
+   43  sed -e '$s/linux/\1python/' data
+   44  sed -e '$s/linux/\1 python/' data
+   45  sed -e '$s/\(.*\)linux/\1 python/' data
+   47  echo "/home/adminuser/test/"|sed 's;/;\'
+   48  echo "/home/adminuser/test/"|sed 's;/;\;'
+   49  echo "/home/adminuser/test/"|sed 's;/;\;g'
+   50  echo "/home/adminuser/test/"|sed 's;/;\\;g'
+   51  echo "/home/adminuser/test/test.sh"|sed 's;/;.*\/;g'
+   52  echo "/home/adminuser/test/test.sh"|sed 's;/;.*\//;g'
+   53  echo "/home/adminuser/test/test.sh"|sed 's;/;.*\/:;g'
+   54  echo "/home/adminuser/test/test.sh"|sed 's;/;.*\/;;g'
+   55  echo "/home/adminuser/test/test.sh"|sed 's/.*\///'
+   56* sed -e 's/linux//' data
+   57  sed -e 's/linux//g' data
+   58  echo "/home/adminuser/test/test.sh"|sed 's/.*\///'
+   59  echo "/home/adminuser/test/test.sh"|sed 's/.*\//-/'
+   60  echo "/home/adminuser/test/test.sh"|sed 's/.*\//' '/'
+   61  echo "/home/adminuser/test/test.sh"|sed 's/.*\// /'
+   65  ls -lrt|grep vip|awk '{print $9}'|sed 's/[:alpha:]//'
+   66  ls -lrt|grep vip|awk '{print $9}'|sed 's/[: alpha :]//'
+   67  ls -lrt|grep vip|awk '{print $9}'|sed 's/[: digit :]//'
+   68  ls -lrt|grep vip|awk '{print $9}'|sed 's/[:digit:]//'
+   69  ls -lrt|grep vip|awk '{print $9}'|sed 's/[[:digit:]]//'
+   70  ls -lrt|grep vip|awk '{print $9}'|sed 's/[a-z]//'
+   71  ls -lrt|grep vip|awk '{print $9}'|sed 's/[a-z]*//'
+   72  ls -lrt|grep vip|awk '{print $9}'|sed 's/[0-9]*//'
+   73  ls -lrt|grep vip|awk '{print $9}'|sed 's/[0-9]*//g'
+   76  sed -e '/jim/ s/mark/800/; /jemy/ s/mark/780/; /tomy/ s/mark/900/; /leena/ s/mark/700/;' markssheet.txt
+   77  sed -e '/jim/ ! /jemy/ s/mark/780/; /tomy/ s/mark/900/; /leena/ s/mark/700/;' markssheet.txt
+   78  sed -e '/jim/ !  s/mark/780/; /tomy/ s/mark/900/; /leena/ s/mark/700/;' markssheet.txt
+   79  sed -e '/jim/ !  s/mark/780/;' markssheet.txt
+   80  sed -e '$s/linux/\1python/' data
+   81  echo "/home/adminuser/test/test.sh"|sed 's/.*\//' '/'
+   82  echo "/home/adminuser/test/test.sh"|sed 's/.*\//-/'
+   83  sed '2,3 s/linux/python/g' data
+   84  sed '2,3 s/(linux\)/learn \1 program/g' data
+   85  sed '2,3 s/\(linux\)/learn \1 program/g' data
+   87  sed '/linux/,+2d' data
+   88  sed '/funy/,+2d' data
+   90  sed 's/[[:blank::]]*$//' data
+   91  sed 's/[[:blank:]]*$//' data
+   92  sed 's/^$//' data
+   93* sed 's///g' data
+   94  sed '/[[:blank:]]*$/d' data
+   95  sed '/^$/d' data
+   97  sed '/very/ a "This is new line" data
+   98  sed '/very/ a "This is new line"' data
+  100  sed '/very/ a "This is new line"' data >data
+  103  sed '/very/ a "This is new line"' data 
+  104  sed -i '/very/ a "This is new line"' data 
+  106  sed -i '/session/ a "This is new line"' data 
+  108  sed -d '/session/' data 
+  109  sed -i '/^$//' data 
+  110  man sed
+  111* sed -i '/^$/   
+  112  sed '/^$/d' data
+  113  sed -i '/^$/d' data
+  116  sed -i '/^$/d' data
+  118  history | grep sed 
+  119  history | grep sed >sed-command
